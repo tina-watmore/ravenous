@@ -1,0 +1,97 @@
+@primary-font: "Inter", sans-serif;
+@secondary-font: "Playfair Display", serif;
+@site-color: #c48f3f;
+
+// general styles
+body {
+    font-family: @primary-font;
+    font-weight: 400;
+    font-size: 16px;
+    .container {
+        margin: 0 auto;
+        max-width: 960px;
+        padding: 0 20px;
+    }
+    .styled-btn {
+        background: @site-color;
+        color: #FFF;
+        border-radius: 5px;
+        height: 40px;
+        padding: 0 30px;
+        text-align: center;
+        font-weight: 600;
+        text-shadow: 1px 1px #333;
+    }
+}
+
+// header styles
+header {
+    .header-bar {
+        background: @site-color;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            color: #FFF;
+            font-size: 1.75rem;
+            font-family: @secondary-font;
+        }
+    }
+    .banner {
+        height: 300px;
+        background-image: url('/public/home-banner.png');
+        background-position: center center;
+        background-size: cover;    
+        display: flex;
+        justify-content: center;
+        align-items: center;            
+    }
+    .search-bar {
+        .quick-filter-container {
+            color: #FFF;
+            font-weight: 500;
+            text-shadow: 2px 2px #333;            
+            text-align: center;
+            margin: 30px 0;
+            button {
+                border-bottom: 2px solid #FFF;
+                margin: 0 10px;
+                padding-bottom: 5px;
+            }
+        }
+        .input-container {            
+            input {
+                margin: 0 10px;
+                border-radius: 5px;
+                height: 40px;
+                border: none;
+                padding: 15px;
+            }
+        }
+        .button-container {
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+// main styles 
+main {
+    background-color: #333;
+    padding: 40px 0;
+    .business-list {
+        display: flex;
+        justify-content: space-between;
+        .business-card {
+            width: 24%;
+            padding: 20px;
+            border-radius: 5px;
+            background: #FFF;            
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
