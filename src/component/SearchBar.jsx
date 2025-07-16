@@ -7,8 +7,8 @@ const SearchBar = () => {
                 <button type="button">Most Reviewed</button>
             </div>
             <div className="input-container">
-                <input type="text" placeholder="Search Business" />
-                <input type="text" placeholder="Where?" /> 
+                <input type="text" name="term" placeholder="Search Business" />
+                <input type="text" name="location" placeholder="Where?" /> 
             </div>
             <div className="button-container">
                 <button type="submit" className="styled-btn">Let's Go</button>

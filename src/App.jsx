@@ -25,6 +25,11 @@ function App() {
           <BusinessList />
         </div>
       </main>
+      <footer>
+        <div className="container">
+          <p>Created by Tina W</p>
+        </div>
+      </footer>
     </>
   )
 }

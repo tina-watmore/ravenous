@@ -39,7 +39,7 @@ header {
         }
     }
     .banner {
-        height: 300px;
+        height: 350px;
         background-image: url('/public/home-banner.png');
         background-position: center center;
         background-size: cover;    
@@ -53,24 +53,25 @@ header {
             font-weight: 500;
             text-shadow: 2px 2px #333;            
             text-align: center;
-            margin: 30px 0;
+            margin: 0 0 20px;
             button {
                 border-bottom: 2px solid #FFF;
-                margin: 0 10px;
+                margin: 0 10px 10px 10px;
                 padding-bottom: 5px;
             }
         }
         .input-container {            
             input {
-                margin: 0 10px;
+                margin: 0 auto 15px auto;
                 border-radius: 5px;
                 height: 40px;
                 border: none;
                 padding: 15px;
+                width: 100%;                
             }
         }
         .button-container {
-            margin: 30px;
+            margin: 20px 0 0;
             display: flex;
             justify-content: center;
         }
@@ -84,14 +85,180 @@ main {
     .business-list {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         .business-card {
-            width: 24%;
+            width: 100%;
             padding: 20px;
             border-radius: 5px;
-            background: #FFF;            
+            background: #FFF;    
+            margin: 0 0 15px 0;        
         }
         img {
             width: 100%;
         }
     }
+}
+
+//footer
+footer {
+    background: #000;
+    color: #FFF;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    * {
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+        .container {
+            padding: 0 30px;
+        }
+        .styled-btn {
+            height: 44px;
+            padding: 0 34px;        
+        }
+    }    
+
+    header {
+        .header-bar {
+            height: 70px;
+        }
+        .banner {
+            height: 350px;
+        }
+        .search-bar {
+            .quick-filter-container {
+                margin: 0 0 20px;
+                button {
+                    margin: 0 10px 10px 10px;
+                    padding-bottom: 5px;
+                }
+            }
+            .input-container {            
+                display: flex;
+                input {
+                    margin: 0 10px;
+                    height: 44px;
+                    width: auto;                
+                }
+            }
+            .button-container {
+                margin: 30px 0 0;
+            }
+        }
+    }
+
+    main {
+        padding: 60px 0;
+        .business-list {
+            .business-card {
+                width: 49%;
+                margin: 0 0 18px 0;        
+            }
+        }
+    }   
+    
+    footer {
+        height: 70px;
+    }
+    
+}
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        .styled-btn {
+            height: 50px;
+            padding: 0 40px;        
+        }
+    }    
+
+    header {
+        .header-bar {
+            height: 80px;
+        }
+        .search-bar {
+            .quick-filter-container {
+                margin: 0 0 30px;
+            }
+            .input-container {            
+                input {
+                    margin: 0 12px;
+                    height: 50px;
+                }
+            }
+            .button-container {
+                margin: 40px 0 0;
+            }
+        }
+    }
+
+    main {
+        padding: 70px 0;
+        .business-list {
+            .business-card {
+                width: 32%;
+                margin: 0 0 20px 0;        
+            }
+        }
+    }   
+    
+    footer {
+        height: 80px;
+    }
+    
+}
+@media (min-width: 1400px) {
+    body {
+        font-size: 22px;
+        .styled-btn {
+            height: 60px;
+            padding: 0 50px;        
+        }
+        .container {
+            max-width: 1200px;
+        }
+    }    
+
+    header {
+        .banner {
+            height: 450px;
+        }        
+        .header-bar {
+            height: 100px;
+        }
+        .search-bar {
+
+            .quick-filter-container {
+                margin: 0 0 40px;
+            }
+            .input-container {            
+                input {
+                    margin: 0 15px;
+                    height: 60px;
+                }
+            }
+            .button-container {
+                margin: 50px 0 0;
+            }
+        }
+    }
+
+    main {
+        padding: 80px 0 60px;
+        .business-list {
+            .business-card {
+                width: 24%;
+                margin: 0 0 20px 0;        
+            }
+        }
+    }   
+    
+    footer {
+        height: 100px;
+    }
+    
 }
