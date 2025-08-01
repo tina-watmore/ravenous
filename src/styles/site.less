@@ -1,6 +1,7 @@
 @primary-font: "Inter", sans-serif;
 @secondary-font: "Playfair Display", serif;
 @site-color: #c48f3f;
+@site-color-2nd: #fcb851;
 
 // general styles
 body {
@@ -58,6 +59,11 @@ header {
                 border-bottom: 2px solid #FFF;
                 margin: 0 10px 10px 10px;
                 padding-bottom: 5px;
+                text-shadow: 1px 1px #333;    
+            }
+            button.active {
+                color: @site-color-2nd;
+                border-bottom-color: @site-color-2nd;
             }
         }
         .input-container {            
