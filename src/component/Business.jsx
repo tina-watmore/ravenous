@@ -8,17 +8,18 @@ const Business = ({business}) => {
             <div className="info">
                 <h3>{business.name}</h3>
                 <div className="address">
-                    <span>{business.location.address1}</span>
+                    
+                    <span>{business.location.address1}</span><br />
                     {
-                        business.location.address2 ? <span>{business.location.address2}</span> : ''
+                        business.location.address2 ? <span>{business.location.address2}<br /></span> : ''
                     }
-                    <span>{business.location.city}</span>
-                    <span>{business.location.state}</span>
-                    <span>{business.location.zip_code}</span>
+                    <span>{business.location.city} </span>
+                    <span>{business.location.state} </span>
+                    <span>{business.location.zip_code}</span><br />
                 </div>
                 <div className="highlights">
-                    <span className="category">{business.category}</span>
-                    <span className="rating">{business.rating} stars</span>
+                    <span className="category">{business.category} </span>
+                    <span className="rating">{business.rating} stars </span>
                     <span className="review">{business.review_count} reviews</span>                    
                 </div>
             </div>

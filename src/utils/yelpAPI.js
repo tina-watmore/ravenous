@@ -1,10 +1,10 @@
-const API_KEY = '7Doo-nqG_nQ9BQ3YGLlljM8jCg5EtFb8_EQX3e7X6rtzjc3_srfT80z-o3J4Wl2IpgA687jmF5L0-rRtSzJ9Ak7s02sSYColD7QRCcbKOQH1bQlPoljmXNe7HgSUaHYx';
+const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = 'https://api.yelp.com/v3';
 const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    authorization: 'Bearer 7Doo-nqG_nQ9BQ3YGLlljM8jCg5EtFb8_EQX3e7X6rtzjc3_srfT80z-o3J4Wl2IpgA687jmF5L0-rRtSzJ9Ak7s02sSYColD7QRCcbKOQH1bQlPoljmXNe7HgSUaHYx'
+    authorization: `Bearer ${API_KEY}`
   }
 };
 
