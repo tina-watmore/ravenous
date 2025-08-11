@@ -1,22 +1,36 @@
 import { useState, useEffect } from 'react';
 
-const SearchBar = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [location, setLocation] = useState('');
-    const [filterBy, setFilterBy] = useState('');
+const SearchBar = ({ onSearch }) => {
+    const [searchTerm, setSearchTerm] = useState('Pizza');
+    const [location, setLocation] = useState('North Sydney');
+    const [filterBy, setFilterBy] = useState('best_match');
 
-    const handleSubmit = () => {
-        if(searchTerm.length || location.length) {
-            console.log(`Searching Yelp with ${searchTerm}, ${location}, ${filterBy}`);               
+    useEffect(() => {
+        onSearch(searchTerm, location, filterBy);      
+        setFilterBy('');
+        setLocation('');
+        setSearchTerm('');
+    }, []);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(searchTerm.length && location.length) {
+            console.log(`Searching Yelp with ${searchTerm}, ${location}, ${!filterBy.length ? 'best_match' : filterBy}`);    
+            onSearch(searchTerm, location, filterBy || 'best_match');  
+            setFilterBy('');
+            setLocation('');
+            setSearchTerm('');                    
+        } else {
+            alert('Please enter search term and location!');
         }
     }
 
     return (
         <form onSubmit={handleSubmit} className="search-bar">
             <div className="quick-filter-container">
-                <button className={filterBy === 'Best Match' ? 'active' : ''} type="button" onClick={() => setFilterBy('Best Match')}>Best Match</button>
-                <button className={filterBy === 'Highest Rated' ? 'active' : ''} type="button" onClick={() => setFilterBy('Highest Rated')}>Highest Rated</button>
-                <button className={filterBy === 'Most Reviewed' ? 'active' : ''} type="button" onClick={() => setFilterBy('Most Reviewed')}>Most Reviewed</button>
+                <button className={filterBy === 'best_match' ? 'active' : ''} type="button" onClick={() => setFilterBy('best_match')}>Best Match</button>
+                <button className={filterBy === 'rating' ? 'active' : ''} type="button" onClick={() => setFilterBy('rating')}>Highest Rated</button>
+                <button className={filterBy === 'reviewed_count' ? 'active' : ''} type="button" onClick={() => setFilterBy('reviewed_count')}>Most Reviewed</button>
             </div>
             <div className="input-container">
                 <input 
